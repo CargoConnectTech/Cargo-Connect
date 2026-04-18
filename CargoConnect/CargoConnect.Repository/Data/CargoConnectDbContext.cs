@@ -16,5 +16,8 @@ namespace CargoConnect.Repository.Data
 
         public DbSet<UserEntity> users { get; set; }
         public DbSet<DriverEntity> drivers{ get; set; }
+
+        public DbSet<TrackingEntity> trackings { get; set; }
+        public DbSet<PaymentEntity> payments { get; set; }
     }
 }
