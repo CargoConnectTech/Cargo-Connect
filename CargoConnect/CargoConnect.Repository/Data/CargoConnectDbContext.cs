@@ -19,5 +19,7 @@ namespace CargoConnect.Repository.Data
 
         public DbSet<TrackingEntity> trackings { get; set; }
         public DbSet<PaymentEntity> payments { get; set; }
+        public DbSet<BookingEntity> bookings { get; set; }
+        public DbSet<TransactionEntity> transactions { get; set; }
     }
 }

@@ -38,7 +38,14 @@ namespace CargoConnect.Domain.Entities
         [Required]
         public string LicenseNumber { get; set; }
 
-        public RoleEnum Role { get; set; } = RoleEnum.Driver;
+        [Required]
+        public DriverStatus status { get; set; }
+
+        [Column(TypeName = "float")]
+        public float? Rating { get; set; }
+
+        [Required]
+        public Roles Role { get; set; } = Roles.Driver;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
     }

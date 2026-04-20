@@ -14,22 +14,25 @@ namespace CargoConnect.Domain.Entities
         [Key]
         public Guid Id { get; set; }
 
-        //[Required]
-        //public Guid BookingId { get; set; }
+        [Required]
+        [ForeignKey("Booking")]
+        public Guid BookingId { get; set; }
 
-        //[ForeignKey(nameof(BookingId))]
-        //public Booking Booking { get; set; }
+        public BookingEntity Booking { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Amount { get; set; }
 
         [Required]
-        public PaymentStatusEnum Status { get; set; }
+        public PaymentStatus Status { get; set; }
 
         [Required]
-        public PaymentMethodEnum PaymentMethod { get; set; }
+        public PaymentMethod PaymentMethod { get; set; }
 
-        public string? TransactionId { get; set; }
+        [Required]
+        [ForeignKey("Transaction")]
+        public Guid TransactionId { get; set; }
+        public TransactionEntity Transaction { get; set; }
     }
 }

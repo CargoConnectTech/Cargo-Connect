@@ -13,18 +13,20 @@ namespace CargoConnect.Domain.Entities
         [Key]
         public Guid Id { get; set; }
 
-        //[Required]
-        //public Guid BookingId { get; set; }
+        [Required]
+        [ForeignKey("Booking")]
 
-        //[ForeignKey("BookingId")]
-        //public BookingEntity Booking { get; set; }
+        public Guid BookingId { get; set; }
+
+        public BookingEntity Booking { get; set; }
 
         [Required]
+        [Column(TypeName = "float")]
         public double Latitude { get; set; }
 
         [Required]
+        [Column(TypeName ="float")]
         public double Longitude { get; set; }
-
         [Required]
         public DateTime Timestamp { get; set; }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CargoConnect.Common.Enums
 {
-    public enum RoleEnum
+    public enum Roles
     {
         Admin,
         User,

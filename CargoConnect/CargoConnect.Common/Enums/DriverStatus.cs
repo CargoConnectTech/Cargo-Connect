@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CargoConnect.Common.Enums
 {
-    public enum PaymentStatusEnum
+    public enum DriverStatus
     {
-        Pending = 1,
-        Success = 2,
-        Failed = 3
+        Available,
+        Busy,
+        Away
     }
 }

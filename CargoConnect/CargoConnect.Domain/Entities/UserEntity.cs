@@ -35,7 +35,7 @@ namespace CargoConnect.Domain.Entities
         [Required]
         public string Password { get; set; }
 
-        public RoleEnum Role { get; set; } = RoleEnum.User;
+        public Roles Role { get; set; } = Roles.User;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
