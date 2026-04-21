@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CargoConnect.Application.Services.Implementations;
+using CargoConnect.Application.Services.Interfaces;
 using CargoConnect.Repository.Data;
 using CargoConnect.Repository.Repositories.Implementations;
 using CargoConnect.Repository.Repositories.Interfaces;
@@ -22,6 +24,12 @@ namespace CargoConnect.Application.Infrastructure.RegisterServices
             });
 
             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+
+            //Mapping Service
+            services.AddScoped<IMappingService,MappingService>();
+
+            //user Service
+            services.AddScoped<IUserService,UserService>();
         }
     }
 }
