@@ -30,6 +30,9 @@ namespace CargoConnect.Application.Infrastructure.RegisterServices
 
             //user Service
             services.AddScoped<IUserService,UserService>();
+
+            //Driver Service
+            services.AddScoped<IDriverService, DriverService>();
         }
     }
 }
