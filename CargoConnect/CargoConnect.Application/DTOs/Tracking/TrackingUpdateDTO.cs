@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CargoConnect.Application.DTOs.Tracking
 {
-    public class UpdateTrackingDTO
+    public class TrackingUpdateDTO
     {
         [Required]
         public Guid Id { get; set; }

@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace CargoConnect.Application.DTOs.Payment
 {
-    public class CreatePaymentDTO
+    public class PaymentUpdateDTO
     {
+
         [Required]
-        public Guid BookingId { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         public decimal Amount { get; set; }
