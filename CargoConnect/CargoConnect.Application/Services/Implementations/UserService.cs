@@ -22,9 +22,9 @@ namespace CargoConnect.Application.Services.Implementations
             _userRepository = userRepository;
         }
 
-        public async Task<bool> CreateAsync(UserCreateDTO userreateDto)
+        public async Task<bool> CreateAsync(UserCreateDTO userCreateDto)
         {
-            bool status = await _userRepository.CreateAsync(_mapper.Map<UserCreateDTO, UserEntity>(userreateDto));
+            bool status = await _userRepository.CreateAsync(_mapper.Map<UserCreateDTO, UserEntity>(userCreateDto));
             return status;
         }
 
