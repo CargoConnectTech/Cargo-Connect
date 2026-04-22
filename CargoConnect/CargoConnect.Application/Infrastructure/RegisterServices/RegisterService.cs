@@ -26,7 +26,7 @@ namespace CargoConnect.Application.Infrastructure.RegisterServices
             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
 
             //Mapping Service
-            services.AddScoped<IMappingService,MappingService>();
+            services.AddScoped<IMappingService,AutoMapperService>();
 
             //user Service
             services.AddScoped<IUserService,UserService>();
