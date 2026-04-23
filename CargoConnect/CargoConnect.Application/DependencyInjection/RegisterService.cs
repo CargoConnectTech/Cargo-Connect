@@ -30,6 +30,9 @@ namespace CargoConnect.Application.DependencyInjection
 
             //Vehical Services
             services.AddScoped<IVehicalService, VehicalService>();
+
+            //Booking Services
+            services.AddScoped<IBookingService, BookingService>();
         }
     }
 }
