@@ -16,7 +16,7 @@ namespace CargoConnect.API.Controllers
         }
 
         [HttpPost("Register-User")]
-        public async Task<IActionResult> RegisterUser(UserCreateDTO userCreateDto)
+        public async Task<IActionResult> RegisterUser([FromBody] UserCreateDTO userCreateDto)
         {
             if(ModelState.IsValid)
             {
@@ -31,7 +31,7 @@ namespace CargoConnect.API.Controllers
         }
 
         [HttpPost("Register-Driver")]
-        public async Task<IActionResult> RegisterDriver(DriverCreateDTO driverCreateDto)
+        public async Task<IActionResult> RegisterDriver([FromBody] DriverCreateDTO driverCreateDto)
         {
             if (ModelState.IsValid)
             {
