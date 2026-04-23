@@ -22,6 +22,7 @@ namespace CargoConnect.Application.DTOs.Vehical
         [Required(ErrorMessage = "Number plate is required")]
         [MinLength(5, ErrorMessage = "Number plate must be at least 5 characters")]
         [MaxLength(15, ErrorMessage = "Number plate cannot exceed 15 characters")]
+        [RegularExpression("^[A-Z]{2}[ -]?[0-9]{2}[ -]?[A-Z]{1,2}[ -]?[0-9]{4}$", ErrorMessage = "Invalid license number format")]
         public string NumberPlate { get; set; } = string.Empty;
 
         [Required]
