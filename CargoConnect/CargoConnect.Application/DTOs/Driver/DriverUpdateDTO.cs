@@ -2,9 +2,7 @@
 
 public class DriverUpdateDTO
 {
-    [Required(ErrorMessage = "Id is required")]
-    [Range(1, int.MaxValue, ErrorMessage = "Invalid Id")]
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     [MinLength(2, ErrorMessage = "First name must be at least 2 characters")]
     [MaxLength(50)]
