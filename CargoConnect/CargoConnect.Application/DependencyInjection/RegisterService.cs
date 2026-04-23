@@ -24,6 +24,9 @@ namespace CargoConnect.Application.DependencyInjection
 
             //Driver Service
             services.AddScoped<IDriverService, DriverService>();
+
+            //Vehical Services
+            services.AddScoped<IVehicalService, VehicalService>();
         }
     }
 }
